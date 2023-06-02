@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+---
+description: Pagina en react
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Parcial 3
 
-## Available Scripts
+Descarga y creación de la pagina en el framework
 
-In the project directory, you can run:
+## Creación en la carpeta y activacion de la misma
 
-### `npm start`
+Podemos hacerlo desde un editor de codigo o de la consola del equipo&#x20;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Abrimos el editor y con el siguiente codigo cremos y instalamos react
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<mark style="background-color:orange;">PS C:\Users\nicol\pagina1-react></mark> <mark style="background-color:orange;"></mark><mark style="background-color:orange;">**npx create-react-app pagina1-react**</mark>
 
-### `npm test`
+con eso ya tenemos la estructura basica.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Código
 
-### `npm run build`
+Creación de los componentes .
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## SRC
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Creamos una nueva carpeta en src llamada componentes(opcional) en el cual crearemos las los apartados solicitados que en este caso son acerca de nosotros, misión y visión de la compañía y contáctenos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+utilisando la estructura que nos da react creamos la funciones correspondientes.
 
-### `npm run eject`
+```javascript
+import React from 'react'
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+export default function Nosotros () {
+  return (
+    <div>
+        <h1>Nosotros</h1>
+        <p>nuetra se centra en la reparacion de colchones y de manera segundaria en la venta de los mismos.</p>
+    </div>
+  )
+}
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```javascript
+import React from 'react'
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+export default function Mision () {
+  return (
+    <div>
+    <h1>Mision</h1>
+     <p>Somos una empreza en la fiel mision de hacer que nuestros clientes tengan el maximo placer al conciliar el sueño.</p>
+    </div>
+  )
+}
+```
 
-## Learn More
+```javascript
+import React from 'react'
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+export default function Vision () {
+  return (
+    <div>
+        <h1>Vision</h1>
+        <p>Nosotros como empreza queremos brindar la alegria de volver a casa con el animo de acostarde en el colchon y pensar que buenos son los colchones de colchones.sas</p>
+    </div>
+  )
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+```javascript
+import React from 'react'
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+export default function Contactos () {
+  return (
+    <div>
+        <h1>Contactos</h1>
+        <p>No. 312568848</p>
+        <p>Dir. calle 182 #37c-11</p>
+    </div>
+  )
+}
 
-### Analyzing the Bundle Size
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Unificación en la pagina central
 
-### Making a Progressive Web App
+cuando terminamos de crear los componentes lo que sigue es colocar las funciones en el apartado app.js en nuestro caso para que así nos retorne los resultados es la web.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```javascript
+import logo from './logo.svg';
+import './App.css';
+import Nosotros from './components/Nosotros';
+import Mision from './components/Mision';
+import Vision from './components/Vision';
+import Contactos from './components/Contactos';
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Colchones.sas
+        </p>
+        <Nosotros/>
+        <Mision/>
+        <Vision/>
+        <Contactos/>
+      </header>
+    </div>
+  );
+}
 
-### Deployment
+export default App;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
 
-### `npm run build` fails to minify
+### Estilos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+El resultado puede ser variar dependiendo de los estilos que utilicemos en esta caco no utilizaremos nada aparte de lo que ya viene predeterminado.
+
+## Resultado Final
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
