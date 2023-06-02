@@ -1,5 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Nosotros from './components/Nosotros';
+import Mision from './components/Mision';
+import Vision from './components/Vision';
+import Contactos from './components/Contactos';
+
 
 function App() {
   return (
@@ -7,16 +12,12 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Colchones.sas
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Nosotros/>
+        <Mision/>
+        <Vision/>
+        <Contactos/>
       </header>
     </div>
   );
